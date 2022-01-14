@@ -1,6 +1,7 @@
 public class RomanNumerals {
     private int number;
     private String output;
+    private int j;
     private static final int[] VALUE = {1,5,10,50,100,500,1000};
     private static final String[] ROMAN = {"I","V","X","L","C","D","M"};
 
@@ -16,34 +17,46 @@ public class RomanNumerals {
         return output;
     }
 
+    private boolean nearNextDigit(int i){
+        if (number >= (VALUE[i+1] - VALUE[i])){
+            number += VALUE[i];
+            output += ROMAN[i];
+            return true;
+        }
+        return false;
+    }
+
     public void convert(){
         do{
             if(number >= VALUE[6]){
+                j = 6;
                 output += convertM(number);
             }
             else if(number >= VALUE[5]){
+                j = 5;
                 output += convertD(number);
             }
             else if(number >= VALUE[4]){
+                j = 4;
                 output += convertC(number);
             }
             else if(number >= VALUE[3]){
+                j = 3;
                 output += convertL(number);
             }
             else if(number >= VALUE[2]){
+                j = 2;
                 output += convertX(number);
             }
             else if(number >= VALUE[1]){
+                j = 1;
                 output += convertV(number);
-                //number -= VALUE[1];
             }
             else if(number >= VALUE[0]){
-                if (number >= (VALUE[1] - VALUE[0])){
-                    number += VALUE[0];
-                    output += ROMAN[0];
-                }else{
+                j = 0;
+                boolean nearDigit = nearNextDigit(j);
+                if(!nearDigit){
                     output += convertI(number);
-                    //number -= VALUE[0];
                 }
             }
         }while(number > 0);
