@@ -116,4 +116,60 @@ public class RomanNumeralsTest {
         rn.convert();
         assertEquals("XVIII", rn.getNumber());
     }
+
+    @Test
+    public void check51(){
+        rn.setNumber(51);
+        rn.convert();
+        assertEquals("LI", rn.getNumber());
+    }
+
+    @Test
+    public void check55(){
+        rn.setNumber(55);
+        rn.convert();
+        assertEquals("LV", rn.getNumber());
+    }
+
+    @Test
+    public void check60(){
+        rn.setNumber(60);
+        rn.convert();
+        assertEquals("LX", rn.getNumber());
+    }
+
+    @Test
+    public void check101(){
+        rn.setNumber(101);
+        rn.convert();
+        assertEquals("CI", rn.getNumber());
+    }
+
+    @Test
+    public void check300(){
+        rn.setNumber(300);
+        rn.convert();
+        assertEquals("CCC", rn.getNumber());
+    }
+
+    @Test
+    public void check600(){
+        rn.setNumber(600);
+        rn.convert();
+        assertEquals("DC", rn.getNumber());
+    }
+
+    @Test
+    public void check1001(){
+        rn.setNumber(1001);
+        rn.convert();
+        assertEquals("MI", rn.getNumber());
+    }
+
+    @Test
+    public void check2000(){
+        rn.setNumber(2000);
+        rn.convert();
+        assertEquals("MM", rn.getNumber());
+    }
 }
