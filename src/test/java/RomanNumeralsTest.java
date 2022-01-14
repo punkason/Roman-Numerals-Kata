@@ -172,4 +172,42 @@ public class RomanNumeralsTest {
         rn.convert();
         assertEquals("MM", rn.getNumber());
     }
+
+    @Test
+    public void check4(){
+        rn.setNumber(4);
+        rn.convert();
+        assertEquals("IV", rn.getNumber());
+    }
+
+    @Test
+    public void check9(){
+        rn.setNumber(9);
+        rn.convert();
+        assertEquals("IX", rn.getNumber());
+    }
+
+    public void check40(){
+        rn.setNumber(40);
+        rn.convert();
+        assertEquals("XL", rn.getNumber());
+    }
+
+    public void check90(){
+        rn.setNumber(90);
+        rn.convert();
+        assertEquals("XC", rn.getNumber());
+    }
+
+    public void check400(){
+        rn.setNumber(400);
+        rn.convert();
+        assertEquals("CD", rn.getNumber());
+    }
+
+    public void check900(){
+        rn.setNumber(900);
+        rn.convert();
+        assertEquals("CM", rn.getNumber());
+    }
 }
