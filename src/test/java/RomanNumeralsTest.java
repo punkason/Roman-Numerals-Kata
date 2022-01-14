@@ -60,4 +60,60 @@ public class RomanNumeralsTest {
         rn.convert();
         assertEquals("M", rn.getNumber());
     }
+
+    @Test
+    public void check2(){
+        rn.setNumber(2);
+        rn.convert();
+        assertEquals("II", rn.getNumber());
+    }
+
+    @Test
+    public void check3(){
+        rn.setNumber(3);
+        rn.convert();
+        assertEquals("III", rn.getNumber());
+    }
+
+    @Test
+    public void check6(){
+        rn.setNumber(6);
+        rn.convert();
+        assertEquals("VI", rn.getNumber());
+    }
+
+    @Test
+    public void check7(){
+        rn.setNumber(7);
+        rn.convert();
+        assertEquals("VII", rn.getNumber());
+    }
+
+    @Test
+    public void check8(){
+        rn.setNumber(8);
+        rn.convert();
+        assertEquals("VIII", rn.getNumber());
+    }
+
+    @Test
+    public void check11(){
+        rn.setNumber(11);
+        rn.convert();
+        assertEquals("XI", rn.getNumber());
+    }
+
+    @Test
+    public void check13(){
+        rn.setNumber(13);
+        rn.convert();
+        assertEquals("XIII", rn.getNumber());
+    }
+
+    @Test
+    public void check18(){
+        rn.setNumber(18);
+        rn.convert();
+        assertEquals("XVIII", rn.getNumber());
+    }
 }
