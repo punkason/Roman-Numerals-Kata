@@ -10,7 +10,7 @@ public class RomanNumerals {
 
     public void convert(){
         int i = ROMAN.length - 1;
-        do{
+        while(number > 0){
             boolean action = false;
             if (number >= VALUE[i]) {//Normal Conversion
                 number = number - VALUE[i];
@@ -29,7 +29,7 @@ public class RomanNumerals {
             }
             if (!action) //shift one numeral if no action is taken
                 i--;
-        }while(number > 0);
+        }
     }
 
     public void setNumber(int i){

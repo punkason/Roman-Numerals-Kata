@@ -229,10 +229,19 @@ public class RomanNumeralsTest {
         rn.convert();
         assertEquals("MMCDXLIV", rn.getOutput());
     }
+
     @Test
     public void check2888(){
         rn.setNumber(2888);
         rn.convert();
         assertEquals("MMDCCCLXXXVIII", rn.getOutput());
     }
+
+    @Test
+    public void check0(){
+        rn.setNumber(0);
+        rn.convert();
+        assertEquals("", rn.getOutput());
+    }
+
 }
