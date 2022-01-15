@@ -4,7 +4,8 @@ public class RomanNumerals {
     private static final int[] VALUE = {1,5,10,50,100,500,1000};
     private static final String[] ROMAN = {"I","V","X","L","C","D","M"};
 
-    public RomanNumerals(){
+    public RomanNumerals(int i){
+        number = i;
         output = "";
     }
 
@@ -30,10 +31,6 @@ public class RomanNumerals {
             if (!action) //shift one numeral if no action is taken
                 i--;
         }
-    }
-
-    public void setNumber(int i){
-        number = i;
     }
 
     public String getOutput(){
