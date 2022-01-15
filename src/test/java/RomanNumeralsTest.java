@@ -222,4 +222,17 @@ public class RomanNumeralsTest {
         rn.convert();
         assertEquals("MMCMXCIX", rn.getOutput());
     }
+
+    @Test
+    public void check2444(){
+        rn.setNumber(2444);
+        rn.convert();
+        assertEquals("MMCDXLIV", rn.getOutput());
+    }
+    @Test
+    public void check2888(){
+        rn.setNumber(2888);
+        rn.convert();
+        assertEquals("MMDCCCLXXXVIII", rn.getOutput());
+    }
 }
